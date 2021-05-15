@@ -29,7 +29,7 @@ mv /init /s6-init
 
 # Get the install functions
 curl -o /install.sh \
-  "https://raw.githubusercontent.com/pi-hole/pi-hole/${PIHOLE_CORE_VERSION}/automated%20install/basic-install.sh"
+  "https://raw.githubusercontent.com/pi-hole/pi-hole/${PIHOLE_CORE_VERSION}/automated%20install/basic-install.sh --disable-install-webserver --unattended"
 
 { echo "PIHOLE_INTERFACE=eth0"
   echo "IPV4_ADDRESS=0.0.0.0"
@@ -38,7 +38,7 @@ curl -o /install.sh \
   echo "PIHOLE_DNS_2=1.0.0.1"
   echo "INSTALL_WEB_SERVER=true"
   echo "INSTALL_WEB_INTERFACE=true"
-  echo "LIGHTTPD_ENABLED=true"
+  echo "LIGHTTPD_ENABLED=false"
 } >> /etc/pihole/setupVars.conf
 source /etc/pihole/setupVars.conf
 
