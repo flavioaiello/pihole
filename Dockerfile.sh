@@ -36,8 +36,8 @@ curl -o /install.sh \
   echo "IPV6_ADDRESS=::"
   echo "PIHOLE_DNS_1=1.1.1.1"
   echo "PIHOLE_DNS_2=1.0.0.1"
-  echo "INSTALL_WEB_SERVER=true"
-  echo "INSTALL_WEB_INTERFACE=true"
+  echo "INSTALL_WEB_SERVER=false"
+  echo "INSTALL_WEB_INTERFACE=false"
   echo "LIGHTTPD_ENABLED=false"
 } >> /etc/pihole/setupVars.conf
 source /etc/pihole/setupVars.conf
